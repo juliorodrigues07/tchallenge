@@ -1,7 +1,7 @@
 #include "reverse.h"
 
 // Reverses the string swapping each character pair from the outside in (towards the middle)
-bool reverse(char *str, unsigned int begin, unsigned int end) {
+bool reverse_str(char *str, unsigned int begin, unsigned int end) {
 
      /* If the positions analyzed are at the middle or beyond, stops the reversing procedure.
         At the middle, the swap has no effect, and beyond that,
@@ -19,7 +19,7 @@ bool reverse(char *str, unsigned int begin, unsigned int end) {
     end--;
 
     // Reverses the string recursively (tail recursion)
-    reverse(str, begin, end);
+    reverse_str(str, begin, end);
 
     // TODO: Fix possibly not returning any value in some control path
 }

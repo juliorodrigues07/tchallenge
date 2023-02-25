@@ -14,19 +14,13 @@ int main(int argc, char **argv) {
     unsigned int str_size = strlen(my_string);
 
     // Reverse the string (last character position is length - 1)
-    check = reverse(my_string, 0, str_size - 1);
-
-    // Allocates a new string to receive the resulted reversed string
-    char *reversed_str = (char *) malloc(str_size * sizeof(char));
-    strcpy(reversed_str, my_string);
+    check = reverse_str(my_string, 0, str_size - 1);
 
     // If the function return value is true, the reverse procedure occurred normally
     if (check)
-        printf("\nReversed string: %s\n", reversed_str);
+        printf("\nReversed string: %s\n", my_string);
     else
         printf("It occurred an error reversing the string!\n");
 
-    // Frees the memory space utilized by the string and shuts down the program
-    free(reversed_str);
     return 0;
 }

@@ -3,4 +3,4 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool reverse(char *str, unsigned int begin, unsigned int end);
+bool reverse_str(char *str, unsigned int begin, unsigned int end);
