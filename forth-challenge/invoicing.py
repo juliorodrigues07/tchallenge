@@ -22,10 +22,12 @@ def main():
         # Replaces the comma with dot to match the python language number representation and converts it to float
         invoicing[state] = float(with_comma.replace(',', '.'))
 
+    total = sum(invoicing.values())
+
     for state in invoicing:
 
         # Divides each state amount by the total and multiplies by 100 to obtain the percentage of the total
-        proportion = invoicing[state] / sum(invoicing.values()) * 100.0
+        proportion = invoicing[state] / total * 100.0
 
         if state != 'Outros':
             print(f'{state} had {round(proportion, 2)}% on the distributor\'s monthly total.\n')
