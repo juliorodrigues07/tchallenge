@@ -13,6 +13,11 @@ int main(int argc, char **argv) {
     char *my_string = argv[1];
     unsigned int str_size = strlen(my_string);
 
+    if (str_size <= 0) {
+        printf("It's not possible to reverse the string!\n");
+        exit(132);    
+    }
+
     // Reverse the string (last character position is length - 1)
     check = reverse_str(my_string, 0, str_size - 1);
 
