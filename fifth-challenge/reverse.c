@@ -22,4 +22,5 @@ bool reverse_str(char *str, unsigned int begin, unsigned int end) {
     reverse_str(str, begin, end);
 
     // TODO: Fix possibly not returning any value in some control path
+    // Also could just print the string initiating by the end index and decrementing it, instead of swapping in place
 }
