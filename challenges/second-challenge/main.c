@@ -15,9 +15,14 @@ int main(int argc, char **argv) {
         printf("Inform a positive number.\n");
         exit(1);
     }
-
-    // Receives the boolean indicating if the number passed as real parameter belong to Fibonacci sequence
-    bool check = fibonacci(n, FIRST, SECOND);
+    
+    bool check = false;
+    
+    // Receives the boolean indicating if the number passed as real parameter belongs to Fibonacci sequence
+    if (n == FIRST || n == SECOND)
+        check = true;
+    else     
+        check = fibonacci(n, FIRST, SECOND);
 
     if (!check)
         printf("\nThe number doesn't belongs to the Fibonacci sequence!\n");

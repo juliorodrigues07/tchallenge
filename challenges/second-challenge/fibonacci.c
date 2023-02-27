@@ -5,8 +5,8 @@ bool fibonacci(unsigned int n, unsigned int first_factor, unsigned int second_fa
     // Calculates the next sequence number (sum of the two previous numbers)
     unsigned int successor = first_factor + second_factor;
 
-    // If the number is equal to the successor or to one of the first two numbers (base case [0, 1, ...])
-    if (n == successor || n == FIRST || n == SECOND)
+    // If the number is equal to the calculated successor of the sequence
+    if (n == successor)
         return true;
 
     // If the successor is greater than the number, there's no point to continue calculating the sequence
