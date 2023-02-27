@@ -7,6 +7,12 @@ invoicing = {'SP': 'R$ 67.836,43',
              'Outros': 'R$ 19.849,53'}
 
 
+def percentage_calc(part, total):
+    
+    # Divides each state amount by the total and multiplies by 100 to obtain the percentage of the total
+    return part / total * 100.0
+
+
 def main():
 
     # Cannot use because dict values are in currency format
@@ -26,8 +32,7 @@ def main():
 
     for state in invoicing:
 
-        # Divides each state amount by the total and multiplies by 100 to obtain the percentage of the total
-        proportion = invoicing[state] / total * 100.0
+        proportion = percentage_calc(invoicing[state], total)
 
         if state != 'Outros':
             print(f'{state} had {round(proportion, 2)}% on the distributor\'s monthly total.\n')
