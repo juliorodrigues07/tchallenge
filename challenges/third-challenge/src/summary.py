@@ -39,8 +39,9 @@ class Main:
                 print(f'There were a total of {above_average} '
                       f'days which the invoicing was above the average ({average}).\n')
 
-        except (Exception, IsADirectoryError, NotADirectoryError, RuntimeError, IndexError):
+        except (IsADirectoryError, NotADirectoryError, FileNotFoundError, RuntimeError, IndexError) as excp:
             print('It occurred an unexpected error!\n')
+            raise excp
 
 
 if __name__ == '__main__':
