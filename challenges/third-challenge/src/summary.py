@@ -11,7 +11,7 @@ class Main:
 
         try:
             chdir('..')
-            with open(getcwd() + '/data/dados.json') as json_file:
+            with open(getcwd() + '/data/dados.json', 'r') as json_file:
                 month_data = load(json_file)
 
                 # Gets the list with all the invoicings from each day which raw values were above zero
